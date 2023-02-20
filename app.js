@@ -48,11 +48,12 @@ function checkWinner(player) {
   
     // Horizontal
     for (i = 0; i <= 6; i++) {
-            for (j = 0; j <= 3; j++) {
+            for (j = 0; j <= 4; j++) {
                 if (document.getElementById(`c${i}-${j}`).style.backgroundColor == `${player}` && 
                 document.getElementById(`c${i}-${j + 1}`).style.backgroundColor == `${player}` && 
                 document.getElementById(`c${i}-${j + 2}`).style.backgroundColor == `${player}` && 
-                document.getElementById(`c${i}-${j + 3}`).style.backgroundColor == `${player}`) 
+                document.getElementById(`c${i}-${j + 3}`).style.backgroundColor == `${player}` &&
+                document.getElementById(`c${i}-${j + 4}`).style.backgroundColor == `${player}`) 
                 {
                     finalWinner(player);
                     return;
@@ -64,11 +65,12 @@ function checkWinner(player) {
 
     // Vertical
         for (i = 0; i <= 5; i++) {
-            for (j = 0; j <= 3; j++) {
+            for (j = 0; j <= 4; j++) {
                 if (document.getElementById(`c${j}-${i}`).style.backgroundColor == `${player}` && 
                 document.getElementById(`c${j + 1}-${i}`).style.backgroundColor == `${player}` && 
                 document.getElementById(`c${j + 2}-${i}`).style.backgroundColor == `${player}` && 
-                document.getElementById(`c${j + 3}-${i}`).style.backgroundColor == `${player}`) 
+                document.getElementById(`c${j + 3}-${i}`).style.backgroundColor == `${player}` &&
+                   document.getElementById(`c${j + 4}-${i}`).style.backgroundColor == `${player}`) 
                 {
                     finalWinner(player);
                     return;
@@ -80,11 +82,12 @@ function checkWinner(player) {
     
     // Right Diagonal
         for (i = 0; i <= 3; i++) {
-            for (j = 0; j <= 2; j++) {
+            for (j = 0; j <= 3; j++) {
                 if (document.getElementById(`c${i}-${j}`).style.backgroundColor == `${player}` && 
                 document.getElementById(`c${i + 1}-${j + 1}`).style.backgroundColor == `${player}` && 
                 document.getElementById(`c${i + 2}-${j + 2}`).style.backgroundColor == `${player}` && 
-                document.getElementById(`c${i + 3}-${j + 3}`).style.backgroundColor == `${player}`) 
+                document.getElementById(`c${i + 3}-${j + 3}`).style.backgroundColor == `${player}` &&
+                   document.getElementById(`c${i + 4}-${j + 4}`).style.backgroundColor == `${player}`) 
                 {
                     finalWinner(player);
                     return;
@@ -95,11 +98,12 @@ function checkWinner(player) {
 
     // Left Diagonal
         for (i = 0; i <= 3; i++) {
-            for (j = 5; j >= 3; j--) {
+            for (j = 5; j >= 4; j--) {
                 if (document.getElementById(`c${i}-${j}`).style.backgroundColor == `${player}` && 
                 document.getElementById(`c${i + 1}-${j - 1}`).style.backgroundColor == `${player}` && 
                 document.getElementById(`c${i + 2}-${j - 2}`).style.backgroundColor == `${player}` && 
-                document.getElementById(`c${i + 3}-${j - 3}`).style.backgroundColor == `${player}`) 
+                document.getElementById(`c${i + 3}-${j - 3}`).style.backgroundColor == `${player}` &&
+                   document.getElementById(`c${i + 4}-${j - 4}`).style.backgroundColor == `${player}`) 
                 {
                     finalWinner(player);
                     return;
